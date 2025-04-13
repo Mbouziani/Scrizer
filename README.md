@@ -21,6 +21,7 @@
 ```yaml
 dependencies:
   scrizer: <latest-version>
+```
 
 ## 🧰 Usage
 
@@ -38,3 +39,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+```
