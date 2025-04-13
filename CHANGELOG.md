@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.1] - 2025-04-13
+
+### Changed
+
+- Add new extension `RouteExtension`
+- Fix Readme file spaces
+
 ## [1.0.0] - 2025-04-13
 
 ### Added
