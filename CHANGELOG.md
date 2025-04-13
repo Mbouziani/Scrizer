@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 ## [1.0.0] - 2025-04-13
 
 ### Added
+
 - Initial release of Scrizer 🎉
 - Responsive typography system via `ScrizerText`
 - Layout wrapper widget `ScrizerLayout`
