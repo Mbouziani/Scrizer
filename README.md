@@ -6,17 +6,23 @@
 
 ---
 
+## 💡 Why Scrizer?
+
+Because scaling manually across devices is painful. Scrizer gives you:
+
+- 🧠 Smart, responsive typography  
+- 🧱 Modular layout helpers  
+- ⚖️ Consistency across all screen sizes  
+
+---
+
 ## 🚀 Features
 
-📏 Responsive scaling for width, height, gaps, icons, and padding
-
-✍️ Typography with dynamic font scaling
-
-⚒ Custom device type detection
-
-🧱 Reusable widgets for responsive text and layout spacing
-
-🧠 Centralized screen info through the Scrizer singleton
+- 📏 Responsive scaling for width, height, gaps, icons, and padding  
+- ✍️ Typography with dynamic font scaling  
+- ⚒ Custom device type detection  
+- 🧱 Reusable widgets for responsive text and layout spacing  
+- 🧠 Centralized screen info through the Scrizer singleton  
 
 ---
 
@@ -84,8 +90,65 @@ Container(
 ```
 ## 🧾 Important Notes
 
-##### `Scrizer.initialize(context)` is automatically called in `ScrizerLayout`.
+* `Scrizer.initialize(context)` is automatically called in `ScrizerLayout`.
 
-##### Always access typography and scaler via `Scrizer.typography` and `Scrizer.scale`, not directly via their classes.
+* Always access typography and scaler via `Scrizer.typography` and `Scrizer.scale`, not directly via their classes.
 
-##### `Scrizer.fontSize(size)` is a shortcut for `Scrizer.typography.scale(size)`.
+* `Scrizer.fontSize(size)` is a shortcut for `Scrizer.typography.scale(size)`.
+
+## 🔤 Typography API
+
+Scrizer provides a consistent set of text styles that scale with screen size.
+
+| **Style Name**     | **Usage Example**              |
+|--------------------|-------------------------------|
+| `displayLarge`     | Hero titles                   |
+| `displayMedium`    | Big headers                   |
+| `headlineMedium`   | Page titles                   |
+| `titleMedium`      | Section titles                |
+| `bodyLarge`        | Main content text             |
+| `bodySmall`        | Secondary info or meta        |
+| `caption`          | Hints, footnotes              |
+| `link`             | Tappable links (underline + color) |
+
+## 📐 Scale API
+
+```dart
+Scrizer.scale.width(100);       // scales width responsively
+Scrizer.scale.height(50);       // scales height responsively
+Scrizer.scale.radius(12);       // responsive border radius
+Scrizer.scale.paddingAll(16);   // uniform padding
+Scrizer.scale.icon(24);         // icon size that scales
+```
+
+## 👀 Example
+
+```dart
+Padding(
+  padding: Scrizer.scale.paddingSymmetric(h: 12, v: 8),
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      ScrizerText('Title', style: Scrizer.typography.titleMedium),
+      ScrizerGap.v(12),
+      ScrizerText('Body text here', fontSize: 14),
+    ],
+  ),
+)
+```
+
+## 🛠️ Roadmap
+
+- [x] Typography system  
+- [x] Layout wrappers  
+- [ ] Support for text direction (RTL)  
+- [ ] Theme integration  
+- [ ] Custom breakpoints  
+
+## 🧑‍💻 Author
+
+Made with ❤️ by [@Mbouziani](https://github.com/Mbouziani)
+
+
+## 📄 License
+MIT License
