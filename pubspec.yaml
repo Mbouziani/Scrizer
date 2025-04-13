@@ -1,7 +1,6 @@
 name: scrizer
 description: "A lightweight and scalable UI toolkit for Flutter that provides responsive typography, spacing, and layout utilities based on screen size and orientation."
-version: 1.0.0
-publish_to: https://pub.dev
+version: 1.0.0 
 
 # Author and metadata
 homepage: https://github.com/Mbouziani/Scrizer
