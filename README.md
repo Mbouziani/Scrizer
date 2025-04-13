@@ -21,3 +21,20 @@
 ```yaml
 dependencies:
   scrizer: <latest-version>
+
+## 🧰 Usage
+
+### 1. Wrap Your App with `ScrizerLayout`
+
+```dart
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ScrizerLayout(
+      child: MaterialApp(
+        title: 'Scrizer App',
+        home: HomeScreen(),
+      ),
+    );
+  }
+}
