@@ -60,6 +60,7 @@ ScrizerText(
   style: TextStyle(fontWeight: FontWeight.bold),
 )
 ```
+
 Or use the typography styles:
 
 ```dart
@@ -68,6 +69,7 @@ Text(
   style: Scrizer.typography.titleLarge,
 )
 ```
+
 ### 3. Add spacing with `ScrizerGap`
 
 ```dart
@@ -88,13 +90,14 @@ Container(
   child: ...
 )
 ```
+
 ## 🧾 Important Notes
 
-* `Scrizer.initialize(context)` is automatically called in `ScrizerLayout`.
+- `Scrizer.initialize(context)` is automatically called in `ScrizerLayout`.
 
-* Always access typography and scaler via `Scrizer.typography` and `Scrizer.scale`, not directly via their classes.
+- Always access typography and scaler via `Scrizer.typography` and `Scrizer.scale`, not directly via their classes.
 
-* `Scrizer.fontSize(size)` is a shortcut for `Scrizer.typography.scale(size)`.
+- `Scrizer.fontSize(size)` is a shortcut for `Scrizer.typography.scale(size)`.
 
 ## 🔤 Typography API
 
@@ -149,6 +152,6 @@ Padding(
 
 Made with ❤️ by [@Mbouziani](https://github.com/Mbouziani)
 
-
 ## 📄 License
+
 MIT License
