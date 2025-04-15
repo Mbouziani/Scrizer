@@ -22,14 +22,14 @@ All notable changes to this project will be documented in this file.
 
 ## [1.1.1] - 2025-04-13
 
-### Changed
+### Changed1
 
 - Added new extension `RouteExtension` for easier navigation
 - Fixed spacing issues in the Readme file
 
 ## [1.0.0] - 2025-04-13
 
-### Added
+### Added1
 
 - Initial release of Scrizer 🎉
 - Responsive typography system via `ScrizerText`
