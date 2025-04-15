@@ -4,7 +4,10 @@ import 'enums/device_type.dart';
 import 'themes/scaler.dart';
 import 'themes/typography.dart';
 
+/// The core Scrizer class responsible for initializing and holding
+/// screen dimensions, orientation, device type, and responsive utilities.
 class Scrizer {
+  // Private static variables to store app-wide layout info
   static late double _screenWidth;
   static late double _screenHeight;
   static late Orientation _orientation;
@@ -13,6 +16,7 @@ class Scrizer {
   static late ScrizerTypography _typography;
   static late ScrizerScaler _scale;
 
+  /// Getters to access screen dimensions, orientation, and utilities
   static double get screenWidth => _screenWidth;
   static double get screenHeight => _screenHeight;
   static Orientation get orientation => _orientation;
@@ -21,8 +25,11 @@ class Scrizer {
   static ScrizerTypography get typography => _typography;
   static ScrizerScaler get scale => _scale;
 
+  /// Scales a font size using the responsive typography system
   static double fontSize(double fontSize) => _typography.scale(fontSize);
 
+  /// Initializes layout data from the `MediaQuery` context
+  /// Should be called once early in the widget tree (e.g. in ScrizerLayout)
   static void initialize(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
     _mediaQuery = mediaQuery;
@@ -34,7 +41,8 @@ class Scrizer {
     _scale = ScrizerScaler(_screenWidth, _screenHeight);
   }
 
-  // Called during layout rebuild
+  /// Updates Scrizer values during layout rebuild using layout constraints
+  /// Called inside LayoutBuilder for dynamic adaptation (e.g. window resize)
   static void build(BuildContext context, BoxConstraints constraints) {
     final mediaQuery = MediaQuery.of(context);
     _mediaQuery = mediaQuery;

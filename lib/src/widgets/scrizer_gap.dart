@@ -8,7 +8,12 @@ class ScrizerGap extends StatelessWidget {
   final bool isVertical; // Vertical gap
   final Color? color; // Optional color for debugging or styling
 
-  const ScrizerGap._({required this.size, this.isHorizontal = false, this.isVertical = false, this.color});
+  const ScrizerGap._({
+    required this.size,
+    this.isHorizontal = false,
+    this.isVertical = false,
+    this.color,
+  });
 
   // Named constructors for horizontal, vertical, and both gaps
   factory ScrizerGap.h(double size) {
@@ -20,7 +25,12 @@ class ScrizerGap extends StatelessWidget {
   }
 
   factory ScrizerGap(double size, {Color? color}) {
-    return ScrizerGap._(size: size, isHorizontal: true, isVertical: true, color: color);
+    return ScrizerGap._(
+      size: size,
+      isHorizontal: true,
+      isVertical: true,
+      color: color,
+    );
   }
 
   @override

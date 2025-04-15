@@ -7,13 +7,19 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("App Bar", style: Scrizer.typography.titleSmall)),
+      appBar: AppBar(
+        title: Text("App Bar", style: Scrizer.typography.titleSmall),
+      ),
       body: SingleChildScrollView(
         padding: Scrizer.scale.paddingAll(16),
         child: Column(
           children: [
             Icon(Icons.home_rounded, size: Scrizer.scale.icon(24)),
-            Container(color: Colors.blue, width: Scrizer.scale.width(100), height: Scrizer.scale.height(100)),
+            Container(
+              color: Colors.blue,
+              width: Scrizer.scale.width(100),
+              height: Scrizer.scale.height(100),
+            ),
             Text("Abcd 1234", style: Scrizer.typography.displayLarge),
             Text("Abcd 1234", style: Scrizer.typography.displayMedium),
             Text("Abcd 1234", style: Scrizer.typography.displaySmall),
