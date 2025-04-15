@@ -24,11 +24,19 @@ class ScrizerBlocState<T> extends Equatable {
   /// Creates a [ScrizerBlocState] with optional [data],
   /// a [state] defaulting to [ScrizerDataState.initial],
   /// and an optional [failure] (defaults to [EmptyFailure]).
-  const ScrizerBlocState({this.data, this.state = ScrizerDataState.initial, this.failure = const EmptyFailure()});
+  const ScrizerBlocState({
+    this.data,
+    this.state = ScrizerDataState.initial,
+    this.failure = const EmptyFailure(),
+  });
 
   /// Factory constructor to create a state with default data.
   factory ScrizerBlocState.withDefault(T defaultData) {
-    return ScrizerBlocState<T>(data: defaultData, state: ScrizerDataState.initial, failure: const EmptyFailure());
+    return ScrizerBlocState<T>(
+      data: defaultData,
+      state: ScrizerDataState.initial,
+      failure: const EmptyFailure(),
+    );
   }
 
   /// Indicates whether the state is [ScrizerDataState.initial].
@@ -51,22 +59,38 @@ class ScrizerBlocState<T> extends Equatable {
 
   /// Creates an initial state with optional [data].
   factory ScrizerBlocState.initial({T? data}) {
-    return ScrizerBlocState(data: data, state: ScrizerDataState.initial, failure: EmptyFailure());
+    return ScrizerBlocState(
+      data: data,
+      state: ScrizerDataState.initial,
+      failure: EmptyFailure(),
+    );
   }
 
   /// Creates an error state with a [failure].
   factory ScrizerBlocState.error(Failure failure) {
-    return ScrizerBlocState(data: null, state: ScrizerDataState.error, failure: failure);
+    return ScrizerBlocState(
+      data: null,
+      state: ScrizerDataState.error,
+      failure: failure,
+    );
   }
 
   /// Creates a loading state.
   factory ScrizerBlocState.loading() {
-    return const ScrizerBlocState(data: null, state: ScrizerDataState.loading, failure: EmptyFailure());
+    return const ScrizerBlocState(
+      data: null,
+      state: ScrizerDataState.loading,
+      failure: EmptyFailure(),
+    );
   }
 
   /// Creates a success state with [data].
   factory ScrizerBlocState.success(T data) {
-    return ScrizerBlocState(data: data, state: ScrizerDataState.success, failure: const EmptyFailure());
+    return ScrizerBlocState(
+      data: data,
+      state: ScrizerDataState.success,
+      failure: const EmptyFailure(),
+    );
   }
 
   @override

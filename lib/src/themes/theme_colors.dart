@@ -15,7 +15,13 @@ class ScrizerTheme {
   final ScrizerColor darkColor;
   final ScrizerColor lightColor;
 
-  ScrizerTheme({required this.useMaterial3, required this.fontFamily, required this.fontFamilyFallback, required this.darkColor, required this.lightColor});
+  ScrizerTheme({
+    required this.useMaterial3,
+    required this.fontFamily,
+    required this.fontFamilyFallback,
+    required this.darkColor,
+    required this.lightColor,
+  });
 }
 
 /// A theme configuration class for customizing the visual design
