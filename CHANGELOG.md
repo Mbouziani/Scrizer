@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0] - 2025-04-15
+
+### Scrizer Colors & Themes
+
+- Platform support for Web, Linux, Windows, macOS 🎉
+- Documentation comments for public API elements
+- Dart formatting run for better code readability
+
 ## [1.2.0] - 2025-04-15
 
 ### Added
