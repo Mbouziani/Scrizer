@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.2] - 2025-04-16
+
+### Scrizer Pubspec file
+
+- fix pubspec code format
+- auto gen some registration auto generated files
+
 ## [1.3.0] - 2025-04-15
 
 ### Scrizer Colors & Themes
