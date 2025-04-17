@@ -2,31 +2,8 @@ import 'package:flutter/material.dart';
 
 /// A theme configuration class for customizing the visual design
 /// of widgets using the Scrizer framework.
-class ScrizerTheme {
-  /// Whether to use Material 3 styling throughout the app.
-  final bool useMaterial3;
-
-  /// The primary font family to be used in text styling.
-  final String fontFamily;
-
-  /// The fallback font family used when the primary is unavailable.
-  final String fontFamilyFallback;
-
-  final ScrizerColor darkColor;
-  final ScrizerColor lightColor;
-
-  ScrizerTheme({
-    required this.useMaterial3,
-    required this.fontFamily,
-    required this.fontFamilyFallback,
-    required this.darkColor,
-    required this.lightColor,
-  });
-}
-
-/// A theme configuration class for customizing the visual design
-/// of widgets using the Scrizer framework.
-class ScrizerColor {
+@immutable
+class ScrizerColor extends ThemeExtension<ScrizerColor> {
   /// The main color used throughout the app (brand color).
   final Color primaryColor;
 
@@ -222,4 +199,146 @@ class ScrizerColor {
     required this.progressIndicatorTrackColor,
     required this.progressIndicatorRefreshBackgroundColor,
   });
+
+  @override
+  ScrizerColor copyWith({
+    Color? primaryColor,
+    Color? secondaryColor,
+    Color? unselectedWidgetColor,
+    Color? colorScheme,
+    Color? scaffoldBackgroundColor,
+    Color? dialogBackgroundColor,
+    Color? hintColor,
+    Color? appBarPrimaryBackgroundColor,
+    Color? appBarSecondaryBackgroundColor,
+    Color? appBarPrimaryForgroundColor,
+    Color? appBarSecondaryForgroundColor,
+    Color? appBarBorderColor,
+    Color? bottomAppBarPrimaryBackgroundColor,
+    Color? bottomAppBarSecondaryBackgroundColor,
+    Color? bottomAppBarPrimaryForgroundColor,
+    Color? bottomAppBarSecondaryForgroundColor,
+    Color? bottomAppBarBorderColor,
+    Color? listTileBackgroundColor,
+    Color? listTileTitleColor,
+    Color? listTileSubtitleColor,
+    Color? listTileBorderColor,
+    Color? inputFillColor,
+    Color? inputFocusColor,
+    Color? inputHintColor,
+    Color? inputIconColor,
+    Color? inputLabelColor,
+    Color? iconPrimaryColor,
+    Color? iconSecondaryColor,
+    Color? textPrimaryColor,
+    Color? textSecondaryColor,
+    Color? textTertiaryColor,
+    Color? textQuatenaryColor,
+    Color? textLinkColor,
+    Color? buttonPrimaryBackgroundColor,
+    Color? buttonSecondaryBackgroundColor,
+    Color? buttonTertiaryBackgroundColor,
+    Color? buttonQuatenaryBackgroundColor,
+    Color? buttonPrimaryForgroundColor,
+    Color? buttonSecondaryForgroundColor,
+    Color? buttonTertiaryForgroundColor,
+    Color? buttonQuatenaryForgroundColor,
+    Color? dividerPrimaryColor,
+    Color? dividerSecondaryColor,
+    Color? bottomSheetPrimaryColor,
+    Color? bottomSheetSecondaryColor,
+    Color? progressIndicatorColor,
+    Color? progressIndicatorTrackColor,
+    Color? progressIndicatorRefreshBackgroundColor,
+  }) {
+    return ScrizerColor(
+      primaryColor: primaryColor ?? this.primaryColor,
+      secondaryColor: secondaryColor ?? this.secondaryColor,
+      unselectedWidgetColor:
+          unselectedWidgetColor ?? this.unselectedWidgetColor,
+      colorScheme: colorScheme ?? this.colorScheme,
+      scaffoldBackgroundColor:
+          scaffoldBackgroundColor ?? this.scaffoldBackgroundColor,
+      dialogBackgroundColor:
+          dialogBackgroundColor ?? this.dialogBackgroundColor,
+      hintColor: hintColor ?? this.hintColor,
+      appBarPrimaryBackgroundColor:
+          appBarPrimaryBackgroundColor ?? this.appBarPrimaryBackgroundColor,
+      appBarSecondaryBackgroundColor:
+          appBarSecondaryBackgroundColor ?? this.appBarSecondaryBackgroundColor,
+      appBarPrimaryForgroundColor:
+          appBarPrimaryForgroundColor ?? this.appBarPrimaryForgroundColor,
+      appBarSecondaryForgroundColor:
+          appBarSecondaryForgroundColor ?? this.appBarSecondaryForgroundColor,
+      appBarBorderColor: appBarBorderColor ?? this.appBarBorderColor,
+      bottomAppBarPrimaryBackgroundColor:
+          bottomAppBarPrimaryBackgroundColor ??
+          this.bottomAppBarPrimaryBackgroundColor,
+      bottomAppBarSecondaryBackgroundColor:
+          bottomAppBarSecondaryBackgroundColor ??
+          this.bottomAppBarSecondaryBackgroundColor,
+      bottomAppBarPrimaryForgroundColor:
+          bottomAppBarPrimaryForgroundColor ??
+          this.bottomAppBarPrimaryForgroundColor,
+      bottomAppBarSecondaryForgroundColor:
+          bottomAppBarSecondaryForgroundColor ??
+          this.bottomAppBarSecondaryForgroundColor,
+      bottomAppBarBorderColor:
+          bottomAppBarBorderColor ?? this.bottomAppBarBorderColor,
+      listTileBackgroundColor:
+          listTileBackgroundColor ?? this.listTileBackgroundColor,
+      listTileTitleColor: listTileTitleColor ?? this.listTileTitleColor,
+      listTileSubtitleColor:
+          listTileSubtitleColor ?? this.listTileSubtitleColor,
+      listTileBorderColor: listTileBorderColor ?? this.listTileBorderColor,
+      inputFillColor: inputFillColor ?? this.inputFillColor,
+      inputFocusColor: inputFocusColor ?? this.inputFocusColor,
+      inputHintColor: inputHintColor ?? this.inputHintColor,
+      inputIconColor: inputIconColor ?? this.inputIconColor,
+      inputLabelColor: inputLabelColor ?? this.inputLabelColor,
+      iconPrimaryColor: iconPrimaryColor ?? this.iconPrimaryColor,
+      iconSecondaryColor: iconSecondaryColor ?? this.iconSecondaryColor,
+      textPrimaryColor: textPrimaryColor ?? this.textPrimaryColor,
+      textSecondaryColor: textSecondaryColor ?? this.textSecondaryColor,
+      textTertiaryColor: textTertiaryColor ?? this.textTertiaryColor,
+      textQuatenaryColor: textQuatenaryColor ?? this.textQuatenaryColor,
+      textLinkColor: textLinkColor ?? this.textLinkColor,
+      buttonPrimaryBackgroundColor:
+          buttonPrimaryBackgroundColor ?? this.buttonPrimaryBackgroundColor,
+      buttonSecondaryBackgroundColor:
+          buttonSecondaryBackgroundColor ?? this.buttonSecondaryBackgroundColor,
+      buttonTertiaryBackgroundColor:
+          buttonTertiaryBackgroundColor ?? this.buttonTertiaryBackgroundColor,
+      buttonQuatenaryBackgroundColor:
+          buttonQuatenaryBackgroundColor ?? this.buttonQuatenaryBackgroundColor,
+      buttonPrimaryForgroundColor:
+          buttonPrimaryForgroundColor ?? this.buttonPrimaryForgroundColor,
+      buttonSecondaryForgroundColor:
+          buttonSecondaryForgroundColor ?? this.buttonSecondaryForgroundColor,
+      buttonTertiaryForgroundColor:
+          buttonTertiaryForgroundColor ?? this.buttonTertiaryForgroundColor,
+      buttonQuatenaryForgroundColor:
+          buttonQuatenaryForgroundColor ?? this.buttonQuatenaryForgroundColor,
+      dividerPrimaryColor: dividerPrimaryColor ?? this.dividerPrimaryColor,
+      dividerSecondaryColor:
+          dividerSecondaryColor ?? this.dividerSecondaryColor,
+      bottomSheetPrimaryColor:
+          bottomSheetPrimaryColor ?? this.bottomSheetPrimaryColor,
+      bottomSheetSecondaryColor:
+          bottomSheetSecondaryColor ?? this.bottomSheetSecondaryColor,
+      progressIndicatorColor:
+          progressIndicatorColor ?? this.progressIndicatorColor,
+      progressIndicatorTrackColor:
+          progressIndicatorTrackColor ?? this.progressIndicatorTrackColor,
+      progressIndicatorRefreshBackgroundColor:
+          progressIndicatorRefreshBackgroundColor ??
+          this.progressIndicatorRefreshBackgroundColor,
+    );
+  }
+
+  @override
+  ScrizerColor lerp(ThemeExtension<ScrizerColor>? other, double t) {
+    if (other is! ScrizerColor) return this;
+    return this;
+  }
 }

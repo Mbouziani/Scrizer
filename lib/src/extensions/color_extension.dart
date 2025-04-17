@@ -5,94 +5,85 @@ import '../themes/theme_colors.dart';
 /// Extension to easily access the colors defined in ScrizerTheme
 /// based on the current theme (light or dark mode).
 extension ScrizerColorsExtension on BuildContext {
-  /// Get the current [ScrizerTheme] based on the current theme mode (light/dark).
-  ScrizerTheme get scrizerTheme => Theme.of(this).extension<ScrizerTheme>()!;
+  /// Get the current [ScrizerColor] based on the current theme mode (light/dark).
+  ScrizerColor get scrizerColor => Theme.of(this).extension<ScrizerColor>()!;
 
   // Get colors based on dark or light mode
-  Color get kPrimaryColor => scrizerTheme.darkColor.primaryColor;
-  Color get kSecondaryColor => scrizerTheme.darkColor.secondaryColor;
-  Color get kUnselectedWidgetColor =>
-      scrizerTheme.darkColor.unselectedWidgetColor;
-  Color get kColorScheme => scrizerTheme.darkColor.colorScheme;
-  Color get kScaffoldBackgroundColor =>
-      scrizerTheme.darkColor.scaffoldBackgroundColor;
-  Color get kDialogBackgroundColor =>
-      scrizerTheme.darkColor.dialogBackgroundColor;
-  Color get kHintColor => scrizerTheme.darkColor.hintColor;
+  Color get xPrimaryColor => scrizerColor.primaryColor;
+  Color get xSecondaryColor => scrizerColor.secondaryColor;
+  Color get xUnselectedWidgetColor => scrizerColor.unselectedWidgetColor;
+  Color get xColorScheme => scrizerColor.colorScheme;
+  Color get xScaffoldBackgroundColor => scrizerColor.scaffoldBackgroundColor;
+  Color get xDialogBackgroundColor => scrizerColor.dialogBackgroundColor;
+  Color get xHintColor => scrizerColor.hintColor;
 
-  Color get kAppBarPrimaryBackgroundColor =>
-      scrizerTheme.darkColor.appBarPrimaryBackgroundColor;
-  Color get kAppBarSecondaryBackgroundColor =>
-      scrizerTheme.darkColor.appBarSecondaryBackgroundColor;
-  Color get kAppBarPrimaryForgroundColor =>
-      scrizerTheme.darkColor.appBarPrimaryForgroundColor;
-  Color get kAppBarSecondaryForgroundColor =>
-      scrizerTheme.darkColor.appBarSecondaryForgroundColor;
-  Color get kAppBarBorderColor => scrizerTheme.darkColor.appBarBorderColor;
+  Color get xAppBarPrimaryBackgroundColor =>
+      scrizerColor.appBarPrimaryBackgroundColor;
+  Color get xAppBarSecondaryBackgroundColor =>
+      scrizerColor.appBarSecondaryBackgroundColor;
+  Color get xAppBarPrimaryForgroundColor =>
+      scrizerColor.appBarPrimaryForgroundColor;
+  Color get xAppBarSecondaryForgroundColor =>
+      scrizerColor.appBarSecondaryForgroundColor;
+  Color get xAppBarBorderColor => scrizerColor.appBarBorderColor;
 
-  Color get kBottomAppBarPrimaryBackgroundColor =>
-      scrizerTheme.darkColor.bottomAppBarPrimaryBackgroundColor;
-  Color get kBottomAppBarSecondaryBackgroundColor =>
-      scrizerTheme.darkColor.bottomAppBarSecondaryBackgroundColor;
-  Color get kBottomAppBarPrimaryForgroundColor =>
-      scrizerTheme.darkColor.bottomAppBarPrimaryForgroundColor;
-  Color get kBottomAppBarSecondaryForgroundColor =>
-      scrizerTheme.darkColor.bottomAppBarSecondaryForgroundColor;
-  Color get kBottomAppBarBorderColor =>
-      scrizerTheme.darkColor.bottomAppBarBorderColor;
+  Color get xBottomAppBarPrimaryBackgroundColor =>
+      scrizerColor.bottomAppBarPrimaryBackgroundColor;
+  Color get xBottomAppBarSecondaryBackgroundColor =>
+      scrizerColor.bottomAppBarSecondaryBackgroundColor;
+  Color get xBottomAppBarPrimaryForgroundColor =>
+      scrizerColor.bottomAppBarPrimaryForgroundColor;
+  Color get xBottomAppBarSecondaryForgroundColor =>
+      scrizerColor.bottomAppBarSecondaryForgroundColor;
+  Color get xBottomAppBarBorderColor => scrizerColor.bottomAppBarBorderColor;
 
-  Color get kListTileBackgroundColor =>
-      scrizerTheme.darkColor.listTileBackgroundColor;
-  Color get kListTileTitleColor => scrizerTheme.darkColor.listTileTitleColor;
-  Color get kListTileSubtitleColor =>
-      scrizerTheme.darkColor.listTileSubtitleColor;
-  Color get kListTileBorderColor => scrizerTheme.darkColor.listTileBorderColor;
+  Color get xListTileBackgroundColor => scrizerColor.listTileBackgroundColor;
+  Color get xListTileTitleColor => scrizerColor.listTileTitleColor;
+  Color get xListTileSubtitleColor => scrizerColor.listTileSubtitleColor;
+  Color get xListTileBorderColor => scrizerColor.listTileBorderColor;
 
-  Color get kInputFillColor => scrizerTheme.darkColor.inputFillColor;
-  Color get kInputFocusColor => scrizerTheme.darkColor.inputFocusColor;
-  Color get kInputHintColor => scrizerTheme.darkColor.inputHintColor;
-  Color get kInputIconColor => scrizerTheme.darkColor.inputIconColor;
-  Color get kInputLabelColor => scrizerTheme.darkColor.inputLabelColor;
+  Color get xInputFillColor => scrizerColor.inputFillColor;
+  Color get xInputFocusColor => scrizerColor.inputFocusColor;
+  Color get xInputHintColor => scrizerColor.inputHintColor;
+  Color get xInputIconColor => scrizerColor.inputIconColor;
+  Color get xInputLabelColor => scrizerColor.inputLabelColor;
 
-  Color get kIconPrimaryColor => scrizerTheme.darkColor.iconPrimaryColor;
-  Color get kIconSecondaryColor => scrizerTheme.darkColor.iconSecondaryColor;
+  Color get xIconPrimaryColor => scrizerColor.iconPrimaryColor;
+  Color get xIconSecondaryColor => scrizerColor.iconSecondaryColor;
 
-  Color get kTextPrimaryColor => scrizerTheme.darkColor.textPrimaryColor;
-  Color get kTextSecondaryColor => scrizerTheme.darkColor.textSecondaryColor;
-  Color get kTextTertiaryColor => scrizerTheme.darkColor.textTertiaryColor;
-  Color get kTextQuatenaryColor => scrizerTheme.darkColor.textQuatenaryColor;
-  Color get kTextLinkColor => scrizerTheme.darkColor.textLinkColor;
+  Color get xTextPrimaryColor => scrizerColor.textPrimaryColor;
+  Color get xTextSecondaryColor => scrizerColor.textSecondaryColor;
+  Color get xTextTertiaryColor => scrizerColor.textTertiaryColor;
+  Color get xTextQuatenaryColor => scrizerColor.textQuatenaryColor;
+  Color get xTextLinkColor => scrizerColor.textLinkColor;
 
-  Color get kButtonPrimaryBackgroundColor =>
-      scrizerTheme.darkColor.buttonPrimaryBackgroundColor;
-  Color get kButtonSecondaryBackgroundColor =>
-      scrizerTheme.darkColor.buttonSecondaryBackgroundColor;
-  Color get kButtonTertiaryBackgroundColor =>
-      scrizerTheme.darkColor.buttonTertiaryBackgroundColor;
-  Color get kButtonQuatenaryBackgroundColor =>
-      scrizerTheme.darkColor.buttonQuatenaryBackgroundColor;
-  Color get kButtonPrimaryForgroundColor =>
-      scrizerTheme.darkColor.buttonPrimaryForgroundColor;
-  Color get kButtonSecondaryForgroundColor =>
-      scrizerTheme.darkColor.buttonSecondaryForgroundColor;
-  Color get kButtonTertiaryForgroundColor =>
-      scrizerTheme.darkColor.buttonTertiaryForgroundColor;
-  Color get kButtonQuatenaryForgroundColor =>
-      scrizerTheme.darkColor.buttonQuatenaryForgroundColor;
+  Color get xButtonPrimaryBackgroundColor =>
+      scrizerColor.buttonPrimaryBackgroundColor;
+  Color get xButtonSecondaryBackgroundColor =>
+      scrizerColor.buttonSecondaryBackgroundColor;
+  Color get xButtonTertiaryBackgroundColor =>
+      scrizerColor.buttonTertiaryBackgroundColor;
+  Color get xButtonQuatenaryBackgroundColor =>
+      scrizerColor.buttonQuatenaryBackgroundColor;
+  Color get xButtonPrimaryForgroundColor =>
+      scrizerColor.buttonPrimaryForgroundColor;
+  Color get xButtonSecondaryForgroundColor =>
+      scrizerColor.buttonSecondaryForgroundColor;
+  Color get xButtonTertiaryForgroundColor =>
+      scrizerColor.buttonTertiaryForgroundColor;
+  Color get xButtonQuatenaryForgroundColor =>
+      scrizerColor.buttonQuatenaryForgroundColor;
 
-  Color get kDividerPrimaryColor => scrizerTheme.darkColor.dividerPrimaryColor;
-  Color get kDividerSecondaryColor =>
-      scrizerTheme.darkColor.dividerSecondaryColor;
+  Color get xDividerPrimaryColor => scrizerColor.dividerPrimaryColor;
+  Color get xDividerSecondaryColor => scrizerColor.dividerSecondaryColor;
 
-  Color get kBottomSheetPrimaryColor =>
-      scrizerTheme.darkColor.bottomSheetPrimaryColor;
-  Color get kBottomSheetSecondaryColor =>
-      scrizerTheme.darkColor.bottomSheetSecondaryColor;
+  Color get xBottomSheetPrimaryColor => scrizerColor.bottomSheetPrimaryColor;
+  Color get xBottomSheetSecondaryColor =>
+      scrizerColor.bottomSheetSecondaryColor;
 
-  Color get kProgressIndicatorColor =>
-      scrizerTheme.darkColor.progressIndicatorColor;
-  Color get kProgressIndicatorTrackColor =>
-      scrizerTheme.darkColor.progressIndicatorTrackColor;
-  Color get kProgressIndicatorRefreshBackgroundColor =>
-      scrizerTheme.darkColor.progressIndicatorRefreshBackgroundColor;
+  Color get xProgressIndicatorColor => scrizerColor.progressIndicatorColor;
+  Color get xProgressIndicatorTrackColor =>
+      scrizerColor.progressIndicatorTrackColor;
+  Color get xProgressIndicatorRefreshBackgroundColor =>
+      scrizerColor.progressIndicatorRefreshBackgroundColor;
 }
