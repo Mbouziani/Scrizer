@@ -9,5 +9,6 @@ export 'src/extensions/route_extension.dart';
 export 'src/scrizer.dart';
 export 'src/themes/theme_colors.dart';
 export 'src/usecase/usecase.dart';
+export 'src/widgets/scrizer_gap.dart';
 export 'src/widgets/scrizer_layout.dart';
 export 'src/widgets/scrizer_text.dart';
